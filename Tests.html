@@ -6,12 +6,15 @@
 </head>
 <body>
 <script>
-  function abbrevName(name){
-    const result = name.split(' ').map(e => e.split('')[0])
-    return `${result[0]}.${result[1]}`
+  function repeatStr (n, s) {
+    let result = ''
+    for (let i = 0; i < n; i++) {
+      result += s
+    }
+    return result
   }
 
-  console.log(abbrevName("Sam Harris"))
+  console.log(repeatStr(5, 'i'))
 </script>
 </body>
 </html>
