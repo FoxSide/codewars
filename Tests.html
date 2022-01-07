@@ -6,15 +6,21 @@
 </head>
 <body>
 <script>
-  function repeatStr (n, s) {
-    let result = ''
-    for (let i = 0; i < n; i++) {
-      result += s
+  const quarterOf = (month) => {
+    if (month === 1 | 2 | 3) {
+      return 1
     }
-    return result
+    if (month === 4 | 5 | 6) {
+      return 2
+    }
+    if (month === 7 | 8 | 9) {
+      return 3
+    }
+    else return 4
   }
 
-  console.log(repeatStr(5, 'i'))
+  console.log(quarterOf(10))
+
 </script>
 </body>
 </html>
