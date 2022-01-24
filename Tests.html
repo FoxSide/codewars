@@ -6,21 +6,12 @@
 </head>
 <body>
 <script>
-  const quarterOf = (month) => {
-    if (month === 1 | 2 | 3) {
-      return 1
-    }
-    if (month === 4 | 5 | 6) {
-      return 2
-    }
-    if (month === 7 | 8 | 9) {
-      return 3
-    }
-    else return 4
+  function comes_after(str,l) {
+    let arr = str.replace(/[^a-zа-яё0-9\s]/gi, ' ').split('')
+    return arr.map((m, i) => m.toLowerCase() === l.toLowerCase() ? arr[i + 1] : '').join('')
   }
 
-  console.log(quarterOf(10))
-
+  console.log(comes_after("Free coffee for all office workers!",'F'))
 </script>
 </body>
 </html>
