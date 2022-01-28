@@ -6,12 +6,14 @@
 </head>
 <body>
 <script>
-  function comes_after(str,l) {
-    let arr = str.replace(/[^a-zа-яё0-9\s]/gi, ' ').split('')
-    return arr.map((m, i) => m.toLowerCase() === l.toLowerCase() ? arr[i + 1] : '').join('')
+  function remove(string) {
+    const arr = string.split('').reverse()
+    arr.map(m => m === '!' ? arr.splice(0,2) : m)
+    return arr
+    // return arr.slice(arr.indexOf('i')).reverse().join('')
   }
 
-  console.log(comes_after("Free coffee for all office workers!",'F'))
+  console.log(remove("Hi! Hi!!!!!!!"))
 </script>
 </body>
 </html>
