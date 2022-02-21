@@ -6,21 +6,12 @@
 </head>
 <body>
 <script>
-  function sumMul(n,m) {
-    let sum = 0
-    if (n === 0 && m === 0) {
-      return 'INVALID'
-    } else {
-      for (let i = n; i <= m; i++) {
-        if (i % n === 0) {
-          sum += i
-        }
-      }
-      return sum
-    }
+  function remove (string) {
+    let arr = string.split('')
+    return arr[arr.length - 1] === '!' ? arr.slice(0, -1).join('') : arr.join('')
   }
 
-  console.log(sumMul(4, 123))
+  console.log(remove("Hi!!!"))
 </script>
 </body>
 </html>
