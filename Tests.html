@@ -6,12 +6,10 @@
 </head>
 <body>
 <script>
-  function remove (string) {
-    let arr = string.split('')
-    return arr[arr.length - 1] === '!' ? arr.slice(0, -1).join('') : arr.join('')
+  String.prototype.toAlternatingCase = function () {
+    return this.split('').map(m => m === m.toUpperCase() ? m.toLowerCase() : m.toUpperCase()).join('')
   }
-
-  console.log(remove("Hi!!!"))
+  console.log('HjH'.toAlternatingCase())
 </script>
 </body>
 </html>
